@@ -1,0 +1,6 @@
+outs:
+- md5: 8cc37451dc67b337e4e9f9aa84eb1923.dir
+  size: 1004919902
+  nfiles: 22001
+  hash: md5
+  path: outdir_rdisk_all
