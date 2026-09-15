@@ -1,0 +1,6 @@
+outs:
+- md5: 7c3d78b0fc66b0ac2dfc91e6e4478676.dir
+  size: 2570713382
+  nfiles: 55001
+  hash: md5
+  path: outdir_rdisk_sig_tilt_1

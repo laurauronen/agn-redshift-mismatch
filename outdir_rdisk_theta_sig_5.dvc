@@ -1,0 +1,6 @@
+outs:
+- md5: 7f94a3efcbd919974ecf58a18a9fabea.dir
+  size: 21978681505
+  nfiles: 440009
+  hash: md5
+  path: outdir_rdisk_theta_sig_5
