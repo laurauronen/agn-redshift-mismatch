@@ -51,8 +51,8 @@ def coeff(r, theta):
 def log_l(theta, sigma, zs, gw_posterior, r):
     # create model at AGN z_s + r
     dl_agn = cosmo.luminosity_distance(zs).value
-    dl_eff = coeff(theta[0], np.pi) * dl_agn
-    r.append(coeff(theta[0], np.pi))
+    dl_eff = coeff(theta[0], theta[1]) * dl_agn
+    r.append(coeff(theta[0], theta[1]))
 
     log_likelihood = -0.5 * (
         (dl_eff - np.mean(gw_posterior)) / np.std(gw_posterior)
@@ -72,7 +72,7 @@ def prior(theta, min_r, max_r, min_tilt, max_tilt):
     ])
 
 
-n_params = 1
+n_params = 2
 
 # set redshift
 zs = 1.5
@@ -213,7 +213,7 @@ if __name__ == '__main__':
     for i, rbbh in enumerate(pos):
         for j, sig in enumerate(sigs):
             for k, tilt in enumerate(tilts):
-            jobs.append((i, j, k, rbbh, sig, tilt))
+                jobs.append((i, j, k, rbbh, sig, tilt))
 
     logb = {}
 
